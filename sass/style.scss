@@ -1,0 +1,35 @@
+@import "abstract/mixin";
+@import "abstract/variable";
+
+@import "base/typography";
+@import "base/animate";
+
+@import "components/about";
+@import "components/button";
+@import "components/skills";
+@import "components/clone";
+@import "components/card";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body{
+    font-family: $primary-font;
+    -webkit-font-smoothing: antialiased;
+}

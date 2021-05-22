@@ -1,0 +1,119 @@
+.navigation{
+    width: 100%;
+    background-color: $primary-color;
+    color: $secondry-color;
+    position: fixed;
+    z-index: 100;
+
+    @include media(1023px){
+            background-color: rgba(255,255,255,.3);
+            backdrop-filter: blur(4px);
+    }
+
+    &__area{
+        @include inner;
+        padding: 1rem 8rem 1rem 12rem;
+        @include flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media(1177px){
+            padding: 1rem 8rem 1rem 8rem;
+        }
+
+        @include media(1023px){
+            padding: 1rem 1rem 1rem 1rem;
+        }
+    }
+
+    &__logo{
+        @include flex;
+        justify-content: space-between;
+
+        @include media(1023px){
+            flex-basis: 100%;
+            color: $secondry-color;
+        }
+
+        &-name{
+            font-size: 1.128571429rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .fas{
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+
+            @include media(1023px){
+               display: block;
+            }
+        }
+
+        input{
+            display: none;
+        }
+    }
+
+    &__links{
+        flex-basis: 55%;
+
+        @include media(1023px){
+            flex-basis: 100%;
+            padding-top: 10px;
+            display: none;
+        }
+
+        ul{
+            @include flex;
+            justify-content: space-between;
+            list-style-type: none;
+
+            @include media(1023px){
+                justify-content: flex-start;
+            }
+
+            @include media(540px){
+                height: 100vh;
+                align-content: flex-start;
+            }
+
+            li{
+                @include media(540px){
+                    flex-basis: 100%;
+                    padding-bottom: 1rem;
+                }
+                a{
+                    text-decoration: none;
+                    color: $secondry-color;
+                    font-weight: 500;
+                    transition: all .1s linear;
+
+                    @include media(1177px){
+                        font-size: .85rem;
+                    }
+
+                    @include media(1023px){
+                        padding-right: 25px;
+                        color: $tertiary-color;
+                        font-size: 1rem;
+                            
+                    }
+
+                    @include media(540px){
+                        padding-right: 0;
+                    }
+
+
+                    &:hover{
+                        border-bottom: 2px solid $secondry-color;
+                    }
+                    
+                }
+
+            }
+        }
+    }
+
+}
